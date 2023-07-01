@@ -1,0 +1,28 @@
+document.addEventListener("DOMContentLoaded", function() {
+    var video = document.getElementById('video'), 
+captureCanvas = document.getElementById('captureCanvas'), 
+uploadCanvas = document.getElementById('uploadCanvas'), 
+captureContext = captureCanvas.getContext('2d'),
+uploadContext = uploadCanvas.getContext('2d'),
+uploadedPhoto = document.getElementById('uploadedPhoto'),
+capturedPhoto = document.getElementById('capturedPhoto'),
+imageUploadInput = document.querySelector('[name="image-upload"]'),
+apiKey = 'INSERT_YOUR_FACESOFT_API_KEY',
+errorAlert = document.getElementById('errorAlert'), AlertwarningAlert = document.getElementById('warningAlert'),
+matchText = document.getElementById('match'),
+scoreText = document.getElementById('score');
+// Stream Camera To Video Element
+if(navigator.mediaDevices.getUserMedia){
+    navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function(stream) {
+      video.srcObject = stream;
+    }).catch(function(error) {
+      console.log(error)
+    })
+  }
+   function redirectToNotebook() {
+      // Redirect to the Jupyter Notebook URL
+      window.location.href = 'http://localhost:8889/notebooks/MAIN%20CODE.ipynb';
+    }
+  
+});

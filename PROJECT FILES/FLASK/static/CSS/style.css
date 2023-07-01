@@ -1,0 +1,35 @@
+.camera-container {
+    max-width: 100%;
+    border: 1px solid black;
+  }
+  .verification-image {
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+  }
+  .btn {
+    background-color: blue;
+    border: black;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  #captureCanvas, #uploadCanvas {
+    display: none;
+  }
+  input[name="image-upload"] {
+    display: none;
+  }
+  #errorAlert, #warningAlert {
+    display: none;
+  }
+  body {
+    background-color: lightskyblue;
+  }
+ .team-members {
+     float: right;
+  }
